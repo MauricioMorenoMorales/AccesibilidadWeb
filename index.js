@@ -1,16 +1,17 @@
 window.onload = () => {
 	document.querySelector(".arrow-right").addEventListener("click", clickRight);
 	document.querySelector(".arrow-left").addEventListener("click", clickLeft);
-	document
-		.querySelector(".send-button")
-		.addEventListener("click", showNotification);
+	document.querySelector(".send-button").addEventListener("click", showNotification);
+
 	document.querySelectorAll(".project").forEach(element => {
 		element.addEventListener("click", e => openModal(e));
 	});
+
 	document.body.addEventListener("click", e => closeModal(e));
 };
 
-/** Esta funcion se llama cuando la persona hace click en la fecha derecha del carousel para navegar a la derecha */
+/** Esta funcion se llama cuando la persona hace click
+ *  en la fecha derecha del carousel para navegar a la derecha */
 function clickRight() {
 	const currentLeft = parseInt(
 		getComputedStyle(document.querySelector(".project-container")).left,
@@ -23,7 +24,8 @@ function clickRight() {
 	document.querySelector(".project-container").style.left = `${newValue}px`;
 }
 
-/** Esta funcion se llama cuando la persona hace click en la fecha izquierda del carousel para navegar a la izquierda */
+/** Esta funcion se llama cuando la persona hace
+ *  click en la fecha izquierda del carousel para navegar a la izquierda */
 function clickLeft() {
 	const currentLeft = parseInt(
 		getComputedStyle(document.querySelector(".project-container")).left,
@@ -36,7 +38,8 @@ function clickLeft() {
 	document.querySelector(".project-container").style.left = `${newValue}px`;
 }
 
-/** Esta funcion se llama cuando la persona hace click en el boton de enviar del formulario de contacto */
+/** Esta funcion se llama cuando la persona hace 
+ * click en el boton de enviar del formulario de contacto */
 function showNotification() {
 	document.querySelector(".notification").style.display = "flex";
 	setTimeout(function() {
@@ -44,7 +47,8 @@ function showNotification() {
 	}, 3000);
 }
 
-/** Esta funcion se llama cuando la persona hace click en cualquier porjecto del carousel */
+/** Esta funcion se llama cuando la persona 
+ * hace click en cualquier porjecto del carousel */
 function openModal(e) {
 	document.querySelector(".modal-container").style.display = "flex";
 }
