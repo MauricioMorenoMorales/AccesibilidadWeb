@@ -68,3 +68,4 @@ Prender voice over
 Rangos de contraste
 	AA => 4.5
 	AAA => 7.0
+ChromeVox =>> Control flecha arriba
